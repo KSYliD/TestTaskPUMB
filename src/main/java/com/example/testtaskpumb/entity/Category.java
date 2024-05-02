@@ -1,5 +1,5 @@
-package com.example.testtaskpumb;
+package com.example.testtaskpumb.entity;
 
 public enum Category {
-    firstCategory, secondCategory, thirdCategory, fourthCategory;
+    FIRST_CATEGORY, SECOND_CATEGORY, THIRD_CATEGORY, FOURTH_CATEGORY
 }

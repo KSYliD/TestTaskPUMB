@@ -1,4 +1,4 @@
-package com.example.testtaskpumb;
+package com.example.testtaskpumb.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
@@ -25,22 +25,23 @@ public class Animal {
         this.name = name;
         this.type = type;
         this.sex = sex;
-        this.weight = weight;
-        this.cost = cost;
-
+        if (weight > 0) {
+            this.weight = weight;
+        }
+        if (cost > 0) {
+            this.cost = cost;
+        }
         if (cost >= 0 && cost <= 20) {
-            this.category = Category.firstCategory;
+            this.category = Category.FIRST_CATEGORY;
         } else if (cost > 20 && cost <= 40) {
-            this.category = Category.secondCategory;
-        }else if (cost > 40 && cost <= 60) {
-            this.category = Category.thirdCategory;
-        }else if (cost > 60) {
-            this.category = Category.fourthCategory;
+            this.category = Category.SECOND_CATEGORY;
+        } else if (cost > 40 && cost <= 60) {
+            this.category = Category.THIRD_CATEGORY;
+        } else if (cost > 60) {
+            this.category = Category.FOURTH_CATEGORY;
         }
 
     }
-
-
 
 
 }
